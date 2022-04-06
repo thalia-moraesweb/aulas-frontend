@@ -1,0 +1,123 @@
+/* REGRAS CSS 
+* é um seletor universal ele altera o box model para todos os elementos da página */
+
+*, *::after, *::before{box-sizing: border-box;}
+
+h2::after {content: " :) "; }
+h2::before {content:" :( " ;}
+
+
+/* body seletor tag */
+body{
+    background-color: lightblue;
+    background-image: url(../imagens/tarde.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+
+/* seletor identificação/ID */
+/* SELECIONAR SEMPRE A QUE DESEJA SE CASO COLOCAR DIV SERA SELECIONADO TODAS COM O MESMO NOME
+UTILIZAR O ID PARA SELECIONAR UMA DIV ESPECIFICA */
+
+#container{
+
+    background-color: white;
+    opacity:0.5 ;
+
+/* Quando combinamos largura e margem 
+automatica, o efeito prático é a centralização da caixa (div) */
+
+    width: 70%;
+    margin: auto;
+
+    /* Espaçamento /Enchimento interno */
+    padding: 15px;
+
+/* Exercicio
+1)COLOQUE BORDA ARREDONDADA
+2)COLOQUE UMA SOMBRA NA DIV
+*/
+
+    border-radius: 10px;
+    box-shadow:red 60px 16px 45px ;
+
+
+  }
+
+/* Seletor Tag
+Finalidade desta regra: tornar as imagens flexíveis */
+img{max-width: 100%;}
+
+
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    border-bottom: solid 5px;
+    font-size: 60px;
+}
+
+h2{
+    color: rgb(42, 3, 97);
+    text-shadow: black 2px 2px 5px,
+    darkgreen -2px -2px 3px; 
+}
+
+
+    /* AO CRIAR A CLASSE USA PONTO AO USAR É SEM PONTO */
+/* ID se usa uma vez e a classe se usa mais de uma */
+
+  /* SELETOR CLASSE */
+ .centralizar {text-align: center;}
+ .sombra-texto {text-shadow: black 3px 3px 4px;}
+ .canto-arredondado{border-radius: 10px;}
+ .destaque{
+     background-color: yellow;
+     border: solid 1px;
+     padding:5px;
+
+ }
+
+ /* SELETOR DESCENDENTE */
+ nav a{ /* Regra Inicial do Link */
+     text-decoration: none; 
+     color: black;
+     background-color: rgb(15, 15, 235);
+    
+     font-weight: bold;
+
+     /* Primeiro valor: cima/baixo
+     Segundo valor: esquerda/direita */
+     padding: 15px 30px;
+
+
+     display:inline-block;
+     width:33.33%;
+     text-align: center;
+
+
+     /* box-sizing: border-box; */
+
+
+
+ }
+
+/* Regra de acionamento do link
+Pseudo-classe :hover */
+nav a:hover{
+    background-color:red ;
+    color: green;
+}
+
+figure {
+    margin:0;
+    text-align: center;
+}
+
+figure img {
+    filter: grayscale(100%);
+    transition:2s
+}
+
+figure img:hover {filter: grayscale(0);}
